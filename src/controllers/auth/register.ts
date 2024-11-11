@@ -15,7 +15,7 @@ export const register = async (
       password: await bcrypt.hash(req.body.password, 5),
     });
     await user.save()
-    res.status(201).send(user.username + "has register successfully!");
+    res.status(201).send(user.username + " has register successfully!");
   } catch (err) {
     const error = err as AppResError;
     res.status(error.statusCode || 500).send(error.message);

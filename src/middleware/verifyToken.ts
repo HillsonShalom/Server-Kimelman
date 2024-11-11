@@ -1,3 +1,5 @@
+/// <reference path="../types/extensions/appRequest.d.ts" />
+
 import { NextFunction, Request, Response } from "express";
 import jwt from 'jsonwebtoken'
 import { AppResError } from "../types/extensions/appResError";

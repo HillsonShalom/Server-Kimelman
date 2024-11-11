@@ -4,7 +4,10 @@ import "dotenv/config";
 import cookieParser from "cookie-parser";
 import accountRouter from "./routes/auth.router";
 import electionRouter from "./routes/election.router";
+import { dbConnection } from "./DB/connection";
 const port = process.env.PORT;
+
+dbConnection();
 
 const app = exp();
 app.use(cors());
