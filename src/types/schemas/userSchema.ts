@@ -8,6 +8,7 @@ const userSchema = new Schema<userDocument>(
     username: {
       type: String,
       required: true,
+      unique: true
     },
     password: {
         type: String,
