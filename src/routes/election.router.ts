@@ -1,8 +1,10 @@
 import { Router } from "express";
+import { candidates } from "../controllers/election/candidates";
+import { vote } from "../controllers/election/vote";
 
-const router = Router()
+const router = Router();
 
-router.get('/')
-router.post('/vote')
+router.get("/", candidates);
+router.post("/vote", vote);
 
-export default router
+export default router;
